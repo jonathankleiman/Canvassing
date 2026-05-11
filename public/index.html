@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canvas Threat Monitor</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="mast">
+        <div>
+          <p class="eyebrow">Daily 2:15pm monitor</p>
+          <h1>Canvas Threat Monitor</h1>
+          <p class="lede">Checks six security and education technology sources for ShinyHunters, Canvas, and Instructure mentions in articles published that day.</p>
+        </div>
+        <div class="status-strip" aria-live="polite">
+          <span id="runState">Waiting for status</span>
+          <strong id="matchCount">0</strong>
+        </div>
+      </section>
+
+      <section id="gate" class="gate">
+        <form id="passwordForm" class="panel" autocomplete="off">
+          <label for="password">Password</label>
+          <div class="inline">
+            <input id="password" name="password" type="password" placeholder="Enter password" required>
+            <button type="submit">Unlock</button>
+          </div>
+          <p class="hint">This gate keeps casual visitors out of the settings panel. GitHub Actions secrets remain the real protection for email credentials.</p>
+        </form>
+      </section>
+
+      <section id="app" class="workspace hidden">
+        <aside class="rail" aria-label="Monitor details">
+          <div>
+            <p class="label">Sources</p>
+            <ul id="sourceList" class="source-list"></ul>
+          </div>
+          <div>
+            <p class="label">Terms</p>
+            <div class="terms">
+              <span>ShinyHunters</span>
+              <span>Canvas</span>
+              <span>Instructure</span>
+            </div>
+          </div>
+        </aside>
+
+        <section class="main-panel">
+          <div class="section-head">
+            <div>
+              <p class="label">Alert recipients</p>
+              <h2>Notification settings</h2>
+            </div>
+            <button id="lockButton" type="button" class="secondary">Lock</button>
+          </div>
+
+          <form id="settingsForm" class="settings-form">
+            <label for="emails">Recipient emails</label>
+            <textarea id="emails" rows="4" placeholder="person@example.com&#10;second@example.com"></textarea>
+
+            <label for="runTime">Daily check time in Eastern Time</label>
+            <input id="runTime" type="time" step="900" value="14:15">
+
+            <label for="fromEmail">Sender email</label>
+            <input id="fromEmail" type="email" placeholder="alerts@yourdomain.com">
+
+            <div class="repo-grid">
+              <label>
+                Owner
+                <input id="owner" type="text" autocomplete="off">
+              </label>
+              <label>
+                Repo
+                <input id="repo" type="text" autocomplete="off">
+              </label>
+            </div>
+
+            <label for="token">GitHub token</label>
+            <input id="token" type="password" placeholder="Fine-grained token with Actions variables write access">
+
+            <div class="actions">
+              <button type="submit">Save to GitHub variables</button>
+              <button id="saveLocal" type="button" class="secondary">Save locally</button>
+            </div>
+          </form>
+
+          <div id="message" class="message" role="status"></div>
+
+          <div class="setup">
+            <p class="label">Email setup</p>
+            <ol>
+              <li>Add a GitHub Actions secret named <code>RESEND_API_KEY</code>, or use the SMTP secrets in the README.</li>
+              <li>Add <code>ALERT_FROM_EMAIL</code> as a repository variable after your sender domain is verified.</li>
+              <li>Use this panel to store <code>ALERT_RECIPIENTS</code> and <code>RUN_TIME_ET</code> as repository variables.</li>
+            </ol>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>

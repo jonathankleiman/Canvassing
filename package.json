@@ -1,0 +1,14 @@
+{
+  "name": "canvassing",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/check-news.mjs",
+    "serve": "npx --yes http-server public -p 4173"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^5.7.3",
+    "nodemailer": "^8.0.7"
+  }
+}

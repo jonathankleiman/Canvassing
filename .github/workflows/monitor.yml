@@ -1,0 +1,55 @@
+name: Daily article monitor
+
+on:
+  schedule:
+    # GitHub cron is UTC and cannot use dynamic repository variables.
+    # The workflow wakes up periodically; scripts/check-news.mjs gates the
+    # effective daily run to RUN_TIME_ET in America/Toronto.
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Run even if it is not currently 2:15pm America/Toronto"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-article-monitor
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    env:
+      ALERT_RECIPIENTS: ${{ vars.ALERT_RECIPIENTS || secrets.ALERT_RECIPIENTS }}
+      ALERT_FROM_EMAIL: ${{ vars.ALERT_FROM_EMAIL || secrets.ALERT_FROM_EMAIL }}
+      RUN_TIME_ET: ${{ vars.RUN_TIME_ET || '14:15' }}
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+      SMTP_HOST: ${{ secrets.SMTP_HOST }}
+      SMTP_PORT: ${{ secrets.SMTP_PORT }}
+      SMTP_SECURE: ${{ secrets.SMTP_SECURE }}
+      SMTP_USER: ${{ secrets.SMTP_USER }}
+      SMTP_PASS: ${{ secrets.SMTP_PASS }}
+      MONITOR_FORCE: ${{ github.event_name == 'workflow_dispatch' && inputs.force || 'false' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - name: Commit monitor state
+        run: |
+          if [[ -n "$(git status --short data/state.json public/status.json)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/state.json public/status.json
+            git commit -m "Update article monitor state"
+            git push
+          else
+            echo "No monitor state changes to commit."
+          fi
