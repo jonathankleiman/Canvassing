@@ -9,6 +9,7 @@ const lockButton = document.querySelector("#lockButton");
 const saveLocalButton = document.querySelector("#saveLocal");
 const message = document.querySelector("#message");
 const runState = document.querySelector("#runState");
+const runCount = document.querySelector("#runCount");
 const matchCount = document.querySelector("#matchCount");
 const sourceList = document.querySelector("#sourceList");
 
@@ -171,6 +172,7 @@ async function loadStatus() {
     const status = await response.json();
     const lastRun = status.lastRunAt ? new Date(status.lastRunAt).toLocaleString() : "No runs yet";
     runState.textContent = lastRun;
+    runCount.textContent = String(status.runCount ?? (status.lastRunAt ? 1 : 0));
     matchCount.textContent = String(status.matchesSent ?? 0);
     renderSources(status.sourceStatus || []);
   } catch {

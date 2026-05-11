@@ -7,6 +7,7 @@ import nodemailer from "nodemailer";
 const TIMEZONE = "America/Toronto";
 const KEYWORDS = ["ShinyHunters", "Canvas", "Instructure"];
 const DEFAULT_RUN_TIME_ET = "14:15";
+const DEFAULT_RUN_WINDOW_MINUTES = 15;
 const STATE_PATH = new URL("../data/state.json", import.meta.url);
 const STATUS_PATH = new URL("../public/status.json", import.meta.url);
 const USER_AGENT = "CanvasThreatMonitor/1.0 (+https://github.com/)";
@@ -61,6 +62,7 @@ async function main() {
   const now = new Date();
   const currentLocalDate = formatLocalDate(now, TIMEZONE);
   const runTimeEt = normalizeRunTime(process.env.RUN_TIME_ET || DEFAULT_RUN_TIME_ET);
+  const runWindowMinutes = normalizeRunWindow(process.env.RUN_WINDOW_MINUTES);
   const force = process.env.MONITOR_FORCE === "true";
   const state = await readJson(STATE_PATH, {
     baselineDate: currentLocalDate,
@@ -69,7 +71,7 @@ async function main() {
   state.baselineDate ||= currentLocalDate;
   state.seen ||= [];
 
-  const runGate = shouldRunNow(now, runTimeEt, state);
+  const runGate = shouldRunNow(now, runTimeEt, runWindowMinutes, state);
   if (!force && !runGate.ok) {
     console.log(`Skipping: ${runGate.reason}`);
     return;
@@ -125,6 +127,7 @@ async function main() {
   }
 
   state.seen = Array.from(seen).slice(-500);
+  state.runCount = Number(state.runCount || 0) + 1;
   state.lastRunAt = now.toISOString();
   state.lastCheckedDate = currentLocalDate;
   state.lastScheduledRunKey = force ? state.lastScheduledRunKey : runGate.key;
@@ -139,7 +142,9 @@ async function main() {
         baselineDate: state.baselineDate,
         timezone: TIMEZONE,
         runTimeEt,
+        runWindowMinutes,
         keywords: KEYWORDS,
+        runCount: state.runCount,
         matchesSent: matches.length,
         sourceStatus,
         matchedArticles: matches.map((match) => ({
@@ -319,7 +324,7 @@ function parseRecipients(value = "") {
     .filter(Boolean);
 }
 
-function shouldRunNow(date, runTimeEt, state) {
+function shouldRunNow(date, runTimeEt, runWindowMinutes, state) {
   const parts = localParts(date, TIMEZONE);
   const currentMinutes = parts.hour * 60 + parts.minute;
   const targetMinutes = parseRunTimeMinutes(runTimeEt);
@@ -327,7 +332,7 @@ function shouldRunNow(date, runTimeEt, state) {
     ? currentMinutes - targetMinutes
     : currentMinutes + 1440 - targetMinutes;
 
-  if (elapsed > 29) {
+  if (elapsed >= runWindowMinutes) {
     return {
       ok: false,
       reason: `current local time is outside the ${runTimeEt} ${TIMEZONE} run window`
@@ -358,6 +363,12 @@ function normalizeRunTime(value) {
 function parseRunTimeMinutes(value) {
   const [hour, minute] = normalizeRunTime(value).split(":").map(Number);
   return hour * 60 + minute;
+}
+
+function normalizeRunWindow(value) {
+  const minutes = Number(value);
+  if (!Number.isInteger(minutes) || minutes < 5 || minutes > 60) return DEFAULT_RUN_WINDOW_MINUTES;
+  return minutes;
 }
 
 function formatLocalDate(date, timeZone) {

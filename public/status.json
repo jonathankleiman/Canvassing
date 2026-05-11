@@ -4,11 +4,13 @@
   "baselineDate": "2026-05-11",
   "timezone": "America/Toronto",
   "runTimeEt": "14:15",
+  "runWindowMinutes": 15,
   "keywords": [
     "ShinyHunters",
     "Canvas",
     "Instructure"
   ],
+  "runCount": 1,
   "matchesSent": 2,
   "sourceStatus": [
     {

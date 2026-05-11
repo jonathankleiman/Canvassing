@@ -5,7 +5,7 @@ on:
     # GitHub cron is UTC and cannot use dynamic repository variables.
     # The workflow wakes up periodically; scripts/check-news.mjs gates the
     # effective daily run to RUN_TIME_ET in America/Toronto.
-    - cron: "*/15 * * * *"
+    - cron: "*/5 * * * *"
   workflow_dispatch:
     inputs:
       force:
@@ -15,6 +15,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -26,10 +28,14 @@ concurrency:
 jobs:
   check:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     env:
       ALERT_RECIPIENTS: ${{ vars.ALERT_RECIPIENTS || secrets.ALERT_RECIPIENTS }}
       ALERT_FROM_EMAIL: ${{ vars.ALERT_FROM_EMAIL || secrets.ALERT_FROM_EMAIL }}
       RUN_TIME_ET: ${{ vars.RUN_TIME_ET || '14:15' }}
+      RUN_WINDOW_MINUTES: ${{ vars.RUN_WINDOW_MINUTES || '15' }}
       RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
       SMTP_HOST: ${{ secrets.SMTP_HOST }}
       SMTP_PORT: ${{ secrets.SMTP_PORT }}
@@ -56,3 +62,9 @@ jobs:
           else
             echo "No monitor state changes to commit."
           fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+      - id: deployment
+        uses: actions/deploy-pages@v4

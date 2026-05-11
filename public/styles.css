@@ -139,17 +139,35 @@ h2 {
 }
 
 .status-strip {
-  min-width: 210px;
+  min-width: 260px;
   display: grid;
   gap: 8px;
   justify-items: end;
   color: var(--muted);
 }
 
-.status-strip strong {
+.metric-pair {
+  display: flex;
+  gap: 18px;
+  justify-content: flex-end;
+}
+
+.metric-pair div {
+  display: grid;
+  justify-items: end;
+}
+
+.metric-pair strong {
   color: var(--ink);
-  font-size: 3rem;
+  font-size: 2.65rem;
   line-height: 1;
+}
+
+.metric-pair span {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .gate {
@@ -326,6 +344,12 @@ code {
   }
 
   .status-strip {
+    justify-items: start;
+  }
+
+  .metric-pair,
+  .metric-pair div {
+    justify-content: flex-start;
     justify-items: start;
   }
 
