@@ -1,9 +1,73 @@
 {
-  "lastRunAt": null,
+  "lastRunAt": "2026-05-11T18:16:39.873Z",
+  "checkedDate": "2026-05-11",
   "baselineDate": "2026-05-11",
   "timezone": "America/Toronto",
   "runTimeEt": "14:15",
-  "keywords": ["ShinyHunters", "Canvas", "Instructure"],
-  "matchesSent": 0,
-  "sourceStatus": []
+  "keywords": [
+    "ShinyHunters",
+    "Canvas",
+    "Instructure"
+  ],
+  "matchesSent": 2,
+  "sourceStatus": [
+    {
+      "name": "Krebs on Security",
+      "ok": true,
+      "checked": 10,
+      "datedToday": 0
+    },
+    {
+      "name": "BleepingComputer",
+      "ok": true,
+      "checked": 15,
+      "datedToday": 5
+    },
+    {
+      "name": "The Record",
+      "ok": true,
+      "checked": 5,
+      "datedToday": 3
+    },
+    {
+      "name": "EdScoop",
+      "ok": true,
+      "checked": 10,
+      "datedToday": 0
+    },
+    {
+      "name": "Spiceworks",
+      "ok": true,
+      "checked": 10,
+      "datedToday": 1
+    },
+    {
+      "name": "Dark Reading",
+      "ok": true,
+      "checked": 50,
+      "datedToday": 3
+    }
+  ],
+  "matchedArticles": [
+    {
+      "source": "BleepingComputer",
+      "title": "Instructure confirms hackers used Canvas flaw to deface portals",
+      "link": "https://www.bleepingcomputer.com/news/security/instructure-confirms-hackers-used-canvas-flaw-to-deface-portals/",
+      "publishedAt": "2026-05-11T15:26:26.000Z",
+      "matchedTerms": [
+        "Canvas",
+        "Instructure"
+      ]
+    },
+    {
+      "source": "Spiceworks",
+      "title": "Canvas LMS breach: Education’s largest data incident",
+      "link": "https://www.spiceworks.com/articles/canvas-lms-breach-educations-largest-data-incident/",
+      "publishedAt": "2026-05-11T14:25:28.000Z",
+      "matchedTerms": [
+        "Canvas",
+        "Instructure"
+      ]
+    }
+  ]
 }
