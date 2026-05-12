@@ -31,7 +31,7 @@ function init() {
 
   const saved = readSaved();
   fields.emails.value = saved.emails || "";
-  fields.runTime.value = saved.runTime || "14:15";
+  fields.runTime.value = saved.runTime || "";
   fields.fromEmail.value = saved.fromEmail || "";
   fields.owner.value = saved.owner || fields.owner.value;
   fields.repo.value = saved.repo || fields.repo.value;
@@ -172,6 +172,9 @@ async function loadStatus() {
     const status = await response.json();
     const lastRun = status.lastRunAt ? new Date(status.lastRunAt).toLocaleString() : "No runs yet";
     runState.textContent = lastRun;
+    if (!fields.runTime.value) {
+      fields.runTime.value = status.runTimeEt || "14:15";
+    }
     runCount.textContent = String(status.runCount ?? (status.lastRunAt ? 1 : 0));
     matchCount.textContent = String(status.matchesSent ?? 0);
     renderSources(status.sourceStatus || []);
