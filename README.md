@@ -59,7 +59,7 @@ data/
 
 ## Scheduling
 
-The workflow wakes every 5 minutes because GitHub cron schedules are static UTC expressions and scheduled Actions can start late. The script then gates the real run to the `RUN_TIME_ET` repository variable in `America/Toronto`.
+The workflow uses targeted UTC retries around the configured Eastern Time run. GitHub cron schedules are static UTC expressions, so the workflow includes entries for both EDT and EST. The script then gates the real run to the `RUN_TIME_ET` repository variable in `America/Toronto`.
 
 Default:
 
@@ -82,7 +82,7 @@ The first run baseline is:
 
 The monitor will not backfill older articles.
 
-GitHub scheduled workflows are best-effort rather than exact-to-the-minute. With the default settings, the intended run window is 2:15pm through 2:29pm ET, and the script records a daily run key so the same day/time does not run twice.
+GitHub scheduled workflows are best-effort rather than exact-to-the-minute. With the current settings, the intended run window is 7:55pm through 8:09pm ET, and the script records a daily run key so the same day/time does not run twice.
 
 ## Email Setup
 

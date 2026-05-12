@@ -3,9 +3,13 @@ name: Daily article monitor
 on:
   schedule:
     # GitHub cron is UTC and cannot use dynamic repository variables.
-    # The workflow wakes up periodically; scripts/check-news.mjs gates the
-    # effective daily run to RUN_TIME_ET in America/Toronto.
-    - cron: "*/5 * * * *"
+    # These entries cover the 7:55pm America/Toronto run window in both EDT
+    # and EST. The script still gates against RUN_TIME_ET so only the matching
+    # local window can execute, and state prevents duplicate sends.
+    - cron: "55 23 * * *"
+    - cron: "5,10 0 * * *"
+    - cron: "55 0 * * *"
+    - cron: "5,10 1 * * *"
   workflow_dispatch:
     inputs:
       force:
