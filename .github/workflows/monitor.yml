@@ -3,13 +3,15 @@ name: Daily article monitor
 on:
   schedule:
     # GitHub cron is UTC and cannot use dynamic repository variables.
-    # These entries cover the 7:55pm America/Toronto run window in both EDT
-    # and EST. The script still gates against RUN_TIME_ET so only the matching
-    # local window can execute, and state prevents duplicate sends.
+    # These entries cover 7:55pm America/Toronto in both EDT and EST, plus
+    # later retries. The script skips early runs and executes the first
+    # delivered scheduled run after RUN_TIME_ET for that local day.
     - cron: "55 23 * * *"
-    - cron: "5,10 0 * * *"
-    - cron: "55 0 * * *"
-    - cron: "5,10 1 * * *"
+    - cron: "5,10,25,40,55 0 * * *"
+    - cron: "5,10,25,40,55 1 * * *"
+    - cron: "10,25,40,55 2 * * *"
+    - cron: "10,25,40,55 3 * * *"
+    - cron: "10,25,40,55 4 * * *"
   workflow_dispatch:
     inputs:
       force:
@@ -39,7 +41,6 @@ jobs:
       ALERT_RECIPIENTS: ${{ vars.ALERT_RECIPIENTS || secrets.ALERT_RECIPIENTS }}
       ALERT_FROM_EMAIL: ${{ vars.ALERT_FROM_EMAIL || secrets.ALERT_FROM_EMAIL }}
       RUN_TIME_ET: ${{ vars.RUN_TIME_ET || '14:15' }}
-      RUN_WINDOW_MINUTES: ${{ vars.RUN_WINDOW_MINUTES || '15' }}
       RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
       SMTP_HOST: ${{ secrets.SMTP_HOST }}
       SMTP_PORT: ${{ secrets.SMTP_PORT }}
