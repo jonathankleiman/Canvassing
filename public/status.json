@@ -1,5 +1,5 @@
 {
-  "lastRunAt": "2026-05-13T00:30:01.930Z",
+  "lastRunAt": "2026-05-13T01:32:43.661Z",
   "checkedDate": "2026-05-12",
   "baselineDate": "2026-05-11",
   "timezone": "America/Toronto",
@@ -9,8 +9,8 @@
     "Canvas",
     "Instructure"
   ],
-  "runCount": 2,
-  "matchesSent": 3,
+  "runCount": 3,
+  "matchesSent": 0,
   "sourceStatus": [
     {
       "name": "Krebs on Security",
@@ -49,38 +49,5 @@
       "datedToday": 4
     }
   ],
-  "matchedArticles": [
-    {
-      "source": "BleepingComputer",
-      "title": "US govt seeks Instructure testimony on massive Canvas cyberattack",
-      "link": "https://www.bleepingcomputer.com/news/security/us-govt-seeks-instructure-testimony-on-massive-canvas-cyberattack/",
-      "publishedAt": "2026-05-12T23:09:55.000Z",
-      "matchedTerms": [
-        "ShinyHunters",
-        "Canvas",
-        "Instructure"
-      ]
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Instructure reaches 'agreement' with ShinyHunters to stop data leak",
-      "link": "https://www.bleepingcomputer.com/news/security/instructure-reaches-agreement-with-shinyhunters-to-stop-data-leak/",
-      "publishedAt": "2026-05-12T09:23:56.000Z",
-      "matchedTerms": [
-        "ShinyHunters",
-        "Canvas",
-        "Instructure"
-      ]
-    },
-    {
-      "source": "The Record",
-      "title": "Instructure pays ransom after Canvas incident as Congress announces investigation",
-      "link": "https://therecord.media/instructure-pays-ransom-canvas-incident-congress-investigation",
-      "publishedAt": "2026-05-12T13:01:00.000Z",
-      "matchedTerms": [
-        "Canvas",
-        "Instructure"
-      ]
-    }
-  ]
+  "matchedArticles": []
 }
