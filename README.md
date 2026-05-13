@@ -59,7 +59,7 @@ data/
 
 ## Scheduling
 
-The workflow uses targeted UTC retries around and after the configured Eastern Time run. GitHub cron schedules are static UTC expressions, so the workflow includes entries for both EDT and EST. The script skips early runs and executes the first delivered scheduled run after `RUN_TIME_ET` for that local day.
+The workflow uses UTC retries around and after the configured Eastern Time run. GitHub cron schedules are static UTC expressions, so the workflow includes retries covering both EDT and EST. The script skips early runs and executes the first delivered scheduled run after `RUN_TIME_ET` for that local day.
 
 Default:
 
