@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-05-11T18:16:39.873Z",
-  "checkedDate": "2026-05-11",
+  "lastRunAt": "2026-05-13T00:30:01.930Z",
+  "checkedDate": "2026-05-12",
   "baselineDate": "2026-05-11",
   "timezone": "America/Toronto",
   "runTimeEt": "19:55",
@@ -9,26 +9,26 @@
     "Canvas",
     "Instructure"
   ],
-  "runCount": 1,
-  "matchesSent": 2,
+  "runCount": 2,
+  "matchesSent": 3,
   "sourceStatus": [
     {
       "name": "Krebs on Security",
       "ok": true,
       "checked": 10,
-      "datedToday": 0
+      "datedToday": 1
     },
     {
       "name": "BleepingComputer",
       "ok": true,
       "checked": 15,
-      "datedToday": 5
+      "datedToday": 13
     },
     {
       "name": "The Record",
       "ok": true,
       "checked": 5,
-      "datedToday": 3
+      "datedToday": 5
     },
     {
       "name": "EdScoop",
@@ -46,25 +46,37 @@
       "name": "Dark Reading",
       "ok": true,
       "checked": 50,
-      "datedToday": 3
+      "datedToday": 4
     }
   ],
   "matchedArticles": [
     {
       "source": "BleepingComputer",
-      "title": "Instructure confirms hackers used Canvas flaw to deface portals",
-      "link": "https://www.bleepingcomputer.com/news/security/instructure-confirms-hackers-used-canvas-flaw-to-deface-portals/",
-      "publishedAt": "2026-05-11T15:26:26.000Z",
+      "title": "US govt seeks Instructure testimony on massive Canvas cyberattack",
+      "link": "https://www.bleepingcomputer.com/news/security/us-govt-seeks-instructure-testimony-on-massive-canvas-cyberattack/",
+      "publishedAt": "2026-05-12T23:09:55.000Z",
       "matchedTerms": [
+        "ShinyHunters",
         "Canvas",
         "Instructure"
       ]
     },
     {
-      "source": "Spiceworks",
-      "title": "Canvas LMS breach: Education’s largest data incident",
-      "link": "https://www.spiceworks.com/articles/canvas-lms-breach-educations-largest-data-incident/",
-      "publishedAt": "2026-05-11T14:25:28.000Z",
+      "source": "BleepingComputer",
+      "title": "Instructure reaches 'agreement' with ShinyHunters to stop data leak",
+      "link": "https://www.bleepingcomputer.com/news/security/instructure-reaches-agreement-with-shinyhunters-to-stop-data-leak/",
+      "publishedAt": "2026-05-12T09:23:56.000Z",
+      "matchedTerms": [
+        "ShinyHunters",
+        "Canvas",
+        "Instructure"
+      ]
+    },
+    {
+      "source": "The Record",
+      "title": "Instructure pays ransom after Canvas incident as Congress announces investigation",
+      "link": "https://therecord.media/instructure-pays-ransom-canvas-incident-congress-investigation",
+      "publishedAt": "2026-05-12T13:01:00.000Z",
       "matchedTerms": [
         "Canvas",
         "Instructure"
