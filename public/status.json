@@ -1,5 +1,5 @@
 {
-  "lastRunAt": "2026-05-14T00:47:58.007Z",
+  "lastRunAt": "2026-05-14T04:34:32.423Z",
   "checkedDate": "2026-05-13",
   "baselineDate": "2026-05-11",
   "timezone": "America/Toronto",
@@ -9,7 +9,7 @@
     "Canvas",
     "Instructure"
   ],
-  "runCount": 4,
+  "runCount": 5,
   "matchesSent": 0,
   "sourceStatus": [
     {
