@@ -59,7 +59,7 @@ data/
 
 ## Scheduling
 
-The workflow uses UTC retries around and after the configured Eastern Time run. GitHub cron schedules are static UTC expressions, so the workflow includes retries covering both EDT and EST. The script skips early runs and executes the first delivered scheduled run after `RUN_TIME_ET` for that local day.
+The workflow retries every 10 minutes on off-peak minutes because GitHub scheduled workflows are best-effort and may be delayed or dropped. The script executes only the first due local-day check after `RUN_TIME_ET`; if GitHub does not deliver a run until after midnight, the script catches the missed prior local day before moving on.
 
 Default:
 
@@ -81,7 +81,7 @@ The first run baseline is:
 
 The monitor will not backfill older articles.
 
-GitHub scheduled workflows are best-effort rather than exact-to-the-minute. With the current settings, the target is 7:55pm ET; if GitHub delivers the exact run late, a later retry can still execute the daily check. The script records a daily run key so the same day/time does not run twice.
+GitHub scheduled workflows are best-effort rather than exact-to-the-minute. With the current settings, the target is 7:55pm ET; the first delivered retry after that target runs the daily check. The script records a daily run key so the same day/time does not run twice.
 
 ## Email Setup
 

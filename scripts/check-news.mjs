@@ -69,12 +69,13 @@ async function main() {
   state.baselineDate ||= currentLocalDate;
   state.seen ||= [];
 
-  const runGate = shouldRunNow(now, runTimeEt, state);
+  const runGate = shouldRunNow(now, runTimeEt, state, force);
   if (!force && !runGate.ok) {
     console.log(`Skipping: ${runGate.reason}`);
     return;
   }
 
+  const checkedDate = runGate.checkedDate;
   const seen = new Set(state.seen);
   const matches = [];
   const sourceStatus = [];
@@ -85,7 +86,7 @@ async function main() {
       const todaysArticles = articles.filter((article) => {
         if (!article.publishedAt) return false;
         const articleDate = formatLocalDate(article.publishedAt, TIMEZONE);
-        return articleDate === currentLocalDate && articleDate >= state.baselineDate;
+        return articleDate === checkedDate && articleDate >= state.baselineDate;
       });
 
       for (const article of todaysArticles) {
@@ -114,21 +115,21 @@ async function main() {
   }
 
   if (matches.length > 0) {
-    await sendEmail(matches, currentLocalDate);
+    await sendEmail(matches, checkedDate);
     for (const match of matches) seen.add(match.id);
   }
 
   if (process.env.DRY_RUN === "true") {
     console.log("DRY_RUN enabled. State files were not updated.");
-    printMatches(matches, currentLocalDate);
+    printMatches(matches, checkedDate);
     return;
   }
 
   state.seen = Array.from(seen).slice(-500);
   state.runCount = Number(state.runCount || 0) + 1;
   state.lastRunAt = now.toISOString();
-  state.lastCheckedDate = currentLocalDate;
-  state.lastScheduledRunKey = force ? state.lastScheduledRunKey : runGate.key;
+  state.lastCheckedDate = checkedDate;
+  state.lastScheduledRunKey = runGate.key;
 
   await fs.writeFile(STATE_PATH, `${JSON.stringify(state, null, 2)}\n`);
   await fs.writeFile(
@@ -136,7 +137,7 @@ async function main() {
     `${JSON.stringify(
       {
         lastRunAt: now.toISOString(),
-        checkedDate: currentLocalDate,
+        checkedDate,
         baselineDate: state.baselineDate,
         timezone: TIMEZONE,
         runTimeEt,
@@ -157,7 +158,7 @@ async function main() {
     )}\n`
   );
 
-  printMatches(matches, currentLocalDate);
+  printMatches(matches, checkedDate);
 }
 
 async function fetchFeed(source) {
@@ -321,27 +322,36 @@ function parseRecipients(value = "") {
     .filter(Boolean);
 }
 
-function shouldRunNow(date, runTimeEt, state) {
+function shouldRunNow(date, runTimeEt, state, force = false) {
+  if (force) {
+    const checkedDate = formatLocalDate(date, TIMEZONE);
+    return { ok: true, checkedDate, key: `${checkedDate}-${runTimeEt}` };
+  }
+
   const parts = localParts(date, TIMEZONE);
   const currentMinutes = parts.hour * 60 + parts.minute;
   const targetMinutes = parseRunTimeMinutes(runTimeEt);
+  const checkedDate =
+    currentMinutes >= targetMinutes
+      ? formatLocalDate(date, TIMEZONE)
+      : offsetLocalDate(date, TIMEZONE, -1);
 
-  if (currentMinutes < targetMinutes) {
+  if (checkedDate < state.baselineDate) {
     return {
       ok: false,
-      reason: `current local time is before the ${runTimeEt} ${TIMEZONE} run target`
+      reason: `checked date ${checkedDate} is before baseline ${state.baselineDate}`
     };
   }
 
-  const key = `${formatLocalDate(date, TIMEZONE)}-${runTimeEt}`;
+  const key = `${checkedDate}-${runTimeEt}`;
   if (state.lastScheduledRunKey === key) {
     return {
       ok: false,
-      reason: `${runTimeEt} ${TIMEZONE} run already completed for today`
+      reason: `${runTimeEt} ${TIMEZONE} run already completed for ${checkedDate}`
     };
   }
 
-  return { ok: true, key };
+  return { ok: true, checkedDate, key };
 }
 
 function normalizeRunTime(value) {
@@ -362,6 +372,12 @@ function parseRunTimeMinutes(value) {
 function formatLocalDate(date, timeZone) {
   const parts = localParts(date, timeZone);
   return `${parts.year}-${String(parts.month).padStart(2, "0")}-${String(parts.day).padStart(2, "0")}`;
+}
+
+function offsetLocalDate(date, timeZone, dayOffset) {
+  const parts = localParts(date, timeZone);
+  const shifted = new Date(Date.UTC(parts.year, parts.month - 1, parts.day + dayOffset, 12, 0, 0));
+  return formatLocalDate(shifted, timeZone);
 }
 
 function localParts(date, timeZone) {
