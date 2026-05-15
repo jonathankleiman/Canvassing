@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-05-14T04:34:32.423Z",
-  "checkedDate": "2026-05-13",
+  "lastRunAt": "2026-05-15T01:29:21.135Z",
+  "checkedDate": "2026-05-14",
   "baselineDate": "2026-05-11",
   "timezone": "America/Toronto",
   "runTimeEt": "19:55",
@@ -9,7 +9,7 @@
     "Canvas",
     "Instructure"
   ],
-  "runCount": 5,
+  "runCount": 6,
   "matchesSent": 0,
   "sourceStatus": [
     {
@@ -22,25 +22,25 @@
       "name": "BleepingComputer",
       "ok": true,
       "checked": 15,
-      "datedToday": 10
+      "datedToday": 11
     },
     {
       "name": "The Record",
       "ok": true,
       "checked": 5,
-      "datedToday": 4
+      "datedToday": 2
     },
     {
       "name": "EdScoop",
       "ok": true,
       "checked": 10,
-      "datedToday": 0
+      "datedToday": 2
     },
     {
       "name": "Spiceworks",
       "ok": true,
       "checked": 10,
-      "datedToday": 3
+      "datedToday": 1
     },
     {
       "name": "Dark Reading",
