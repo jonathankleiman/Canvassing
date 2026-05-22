@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-05-21T01:50:24.635Z",
-  "checkedDate": "2026-05-20",
+  "lastRunAt": "2026-05-22T01:35:51.838Z",
+  "checkedDate": "2026-05-21",
   "baselineDate": "2026-05-11",
   "timezone": "America/Toronto",
   "runTimeEt": "19:55",
@@ -9,14 +9,14 @@
     "Canvas",
     "Instructure"
   ],
-  "runCount": 12,
-  "matchesSent": 1,
+  "runCount": 13,
+  "matchesSent": 0,
   "sourceStatus": [
     {
       "name": "Krebs on Security",
       "ok": true,
       "checked": 10,
-      "datedToday": 0
+      "datedToday": 1
     },
     {
       "name": "BleepingComputer",
@@ -28,7 +28,7 @@
       "name": "The Record",
       "ok": true,
       "checked": 5,
-      "datedToday": 5
+      "datedToday": 3
     },
     {
       "name": "EdScoop",
@@ -46,18 +46,8 @@
       "name": "Dark Reading",
       "ok": true,
       "checked": 50,
-      "datedToday": 6
+      "datedToday": 5
     }
   ],
-  "matchedArticles": [
-    {
-      "source": "The Record",
-      "title": "7-Eleven confirms breach after ShinyHunters claims",
-      "link": "https://therecord.media/7-eleven-reports-data-breach-shinyhunters",
-      "publishedAt": "2026-05-20T16:05:00.000Z",
-      "matchedTerms": [
-        "ShinyHunters"
-      ]
-    }
-  ]
+  "matchedArticles": []
 }
