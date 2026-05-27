@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-05-26T01:30:42.150Z",
-  "checkedDate": "2026-05-25",
+  "lastRunAt": "2026-05-27T01:52:46.869Z",
+  "checkedDate": "2026-05-26",
   "baselineDate": "2026-05-11",
   "timezone": "America/Toronto",
   "runTimeEt": "19:55",
@@ -9,46 +9,64 @@
     "Canvas",
     "Instructure"
   ],
-  "runCount": 17,
-  "matchesSent": 0,
+  "runCount": 18,
+  "matchesSent": 2,
   "sourceStatus": [
     {
       "name": "Krebs on Security",
       "ok": true,
       "checked": 10,
-      "datedToday": 1
+      "datedToday": 0
     },
     {
       "name": "BleepingComputer",
       "ok": true,
       "checked": 15,
-      "datedToday": 2
+      "datedToday": 8
     },
     {
       "name": "The Record",
       "ok": true,
       "checked": 5,
-      "datedToday": 0
+      "datedToday": 1
     },
     {
       "name": "EdScoop",
       "ok": true,
       "checked": 10,
-      "datedToday": 0
+      "datedToday": 2
     },
     {
       "name": "Spiceworks",
       "ok": true,
       "checked": 10,
-      "datedToday": 0
+      "datedToday": 2
     },
     {
       "name": "Dark Reading",
-      "ok": false,
-      "checked": 0,
-      "datedToday": 0,
-      "error": "https://www.darkreading.com/rss.xml returned HTTP 404"
+      "ok": true,
+      "checked": 50,
+      "datedToday": 4
     }
   ],
-  "matchedArticles": []
+  "matchedArticles": [
+    {
+      "source": "BleepingComputer",
+      "title": "Charter confirms data breach after ShinyHunters extortion threat",
+      "link": "https://www.bleepingcomputer.com/news/security/charter-confirms-data-breach-after-shinyhunters-extortion-threat/",
+      "publishedAt": "2026-05-26T19:46:01.000Z",
+      "matchedTerms": [
+        "ShinyHunters"
+      ]
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "7-Eleven data breach exposes personal information of 185,000 people",
+      "link": "https://www.bleepingcomputer.com/news/security/7-eleven-data-breach-exposes-personal-information-of-185-000-people/",
+      "publishedAt": "2026-05-26T07:01:12.000Z",
+      "matchedTerms": [
+        "ShinyHunters"
+      ]
+    }
+  ]
 }
