@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-05-27T01:52:46.869Z",
-  "checkedDate": "2026-05-26",
+  "lastRunAt": "2026-05-28T01:27:39.050Z",
+  "checkedDate": "2026-05-27",
   "baselineDate": "2026-05-11",
   "timezone": "America/Toronto",
   "runTimeEt": "19:55",
@@ -9,8 +9,8 @@
     "Canvas",
     "Instructure"
   ],
-  "runCount": 18,
-  "matchesSent": 2,
+  "runCount": 19,
+  "matchesSent": 0,
   "sourceStatus": [
     {
       "name": "Krebs on Security",
@@ -22,19 +22,19 @@
       "name": "BleepingComputer",
       "ok": true,
       "checked": 15,
-      "datedToday": 8
+      "datedToday": 7
     },
     {
       "name": "The Record",
       "ok": true,
       "checked": 5,
-      "datedToday": 1
+      "datedToday": 5
     },
     {
       "name": "EdScoop",
       "ok": true,
       "checked": 10,
-      "datedToday": 2
+      "datedToday": 0
     },
     {
       "name": "Spiceworks",
@@ -49,24 +49,5 @@
       "datedToday": 4
     }
   ],
-  "matchedArticles": [
-    {
-      "source": "BleepingComputer",
-      "title": "Charter confirms data breach after ShinyHunters extortion threat",
-      "link": "https://www.bleepingcomputer.com/news/security/charter-confirms-data-breach-after-shinyhunters-extortion-threat/",
-      "publishedAt": "2026-05-26T19:46:01.000Z",
-      "matchedTerms": [
-        "ShinyHunters"
-      ]
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "7-Eleven data breach exposes personal information of 185,000 people",
-      "link": "https://www.bleepingcomputer.com/news/security/7-eleven-data-breach-exposes-personal-information-of-185-000-people/",
-      "publishedAt": "2026-05-26T07:01:12.000Z",
-      "matchedTerms": [
-        "ShinyHunters"
-      ]
-    }
-  ]
+  "matchedArticles": []
 }
