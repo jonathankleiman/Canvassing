@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-05-28T23:58:00.299Z",
-  "checkedDate": "2026-05-28",
+  "lastRunAt": "2026-05-30T00:14:37.838Z",
+  "checkedDate": "2026-05-29",
   "baselineDate": "2026-05-11",
   "timezone": "America/Toronto",
   "runTimeEt": "19:55",
@@ -9,7 +9,7 @@
     "Canvas",
     "Instructure"
   ],
-  "runCount": 20,
+  "runCount": 21,
   "matchesSent": 1,
   "sourceStatus": [
     {
@@ -22,13 +22,13 @@
       "name": "BleepingComputer",
       "ok": true,
       "checked": 15,
-      "datedToday": 10
+      "datedToday": 8
     },
     {
       "name": "The Record",
       "ok": true,
       "checked": 5,
-      "datedToday": 4
+      "datedToday": 1
     },
     {
       "name": "EdScoop",
@@ -40,21 +40,21 @@
       "name": "Spiceworks",
       "ok": true,
       "checked": 10,
-      "datedToday": 2
+      "datedToday": 4
     },
     {
       "name": "Dark Reading",
       "ok": true,
       "checked": 50,
-      "datedToday": 5
+      "datedToday": 4
     }
   ],
   "matchedArticles": [
     {
       "source": "BleepingComputer",
-      "title": "Carnival Cruise confirms data breach affecting nearly 6 million people",
-      "link": "https://www.bleepingcomputer.com/news/security/carnival-cruise-confirms-data-breach-affecting-nearly-6-million-people/",
-      "publishedAt": "2026-05-28T10:49:27.000Z",
+      "title": "Charter Communications data breach affects 4.9 million accounts",
+      "link": "https://www.bleepingcomputer.com/news/security/charter-communications-data-breach-affects-49-million-accounts/",
+      "publishedAt": "2026-05-29T08:29:40.000Z",
       "matchedTerms": [
         "ShinyHunters"
       ]
