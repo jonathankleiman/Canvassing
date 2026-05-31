@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-05-30T00:14:37.838Z",
-  "checkedDate": "2026-05-29",
+  "lastRunAt": "2026-05-31T01:36:03.134Z",
+  "checkedDate": "2026-05-30",
   "baselineDate": "2026-05-11",
   "timezone": "America/Toronto",
   "runTimeEt": "19:55",
@@ -9,8 +9,8 @@
     "Canvas",
     "Instructure"
   ],
-  "runCount": 21,
-  "matchesSent": 1,
+  "runCount": 22,
+  "matchesSent": 0,
   "sourceStatus": [
     {
       "name": "Krebs on Security",
@@ -22,13 +22,13 @@
       "name": "BleepingComputer",
       "ok": true,
       "checked": 15,
-      "datedToday": 8
+      "datedToday": 2
     },
     {
       "name": "The Record",
       "ok": true,
       "checked": 5,
-      "datedToday": 1
+      "datedToday": 0
     },
     {
       "name": "EdScoop",
@@ -40,24 +40,14 @@
       "name": "Spiceworks",
       "ok": true,
       "checked": 10,
-      "datedToday": 4
+      "datedToday": 0
     },
     {
       "name": "Dark Reading",
       "ok": true,
       "checked": 50,
-      "datedToday": 4
+      "datedToday": 0
     }
   ],
-  "matchedArticles": [
-    {
-      "source": "BleepingComputer",
-      "title": "Charter Communications data breach affects 4.9 million accounts",
-      "link": "https://www.bleepingcomputer.com/news/security/charter-communications-data-breach-affects-49-million-accounts/",
-      "publishedAt": "2026-05-29T08:29:40.000Z",
-      "matchedTerms": [
-        "ShinyHunters"
-      ]
-    }
-  ]
+  "matchedArticles": []
 }
