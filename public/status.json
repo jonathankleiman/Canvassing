@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-06-04T02:00:41.325Z",
-  "checkedDate": "2026-06-03",
+  "lastRunAt": "2026-06-05T01:39:14.348Z",
+  "checkedDate": "2026-06-04",
   "baselineDate": "2026-05-11",
   "timezone": "America/Toronto",
   "runTimeEt": "19:55",
@@ -9,7 +9,7 @@
     "Canvas",
     "Instructure"
   ],
-  "runCount": 26,
+  "runCount": 27,
   "matchesSent": 0,
   "sourceStatus": [
     {
@@ -28,7 +28,7 @@
       "name": "The Record",
       "ok": true,
       "checked": 5,
-      "datedToday": 2
+      "datedToday": 5
     },
     {
       "name": "EdScoop",
@@ -40,14 +40,13 @@
       "name": "Spiceworks",
       "ok": true,
       "checked": 10,
-      "datedToday": 1
+      "datedToday": 3
     },
     {
       "name": "Dark Reading",
-      "ok": false,
-      "checked": 0,
-      "datedToday": 0,
-      "error": "https://www.darkreading.com/rss.xml returned HTTP 404"
+      "ok": true,
+      "checked": 50,
+      "datedToday": 5
     }
   ],
   "matchedArticles": []
