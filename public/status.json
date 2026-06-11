@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-06-11T01:40:10.377Z",
-  "checkedDate": "2026-06-10",
+  "lastRunAt": "2026-06-11T23:57:04.214Z",
+  "checkedDate": "2026-06-11",
   "baselineDate": "2026-05-11",
   "timezone": "America/Toronto",
   "runTimeEt": "19:55",
@@ -9,26 +9,28 @@
     "Canvas",
     "Instructure"
   ],
-  "runCount": 33,
-  "matchesSent": 1,
+  "runCount": 34,
+  "matchesSent": 0,
   "sourceStatus": [
     {
       "name": "Krebs on Security",
       "ok": true,
       "checked": 10,
-      "datedToday": 1
+      "datedToday": 0
     },
     {
       "name": "BleepingComputer",
-      "ok": true,
-      "checked": 15,
-      "datedToday": 10
+      "ok": false,
+      "checked": 0,
+      "datedToday": 0,
+      "error": "https://www.bleepingcomputer.com/feed/ returned HTTP 403"
     },
     {
       "name": "The Record",
-      "ok": true,
-      "checked": 5,
-      "datedToday": 3
+      "ok": false,
+      "checked": 0,
+      "datedToday": 0,
+      "error": "https://therecord.media/feed returned HTTP 520"
     },
     {
       "name": "EdScoop",
@@ -40,24 +42,14 @@
       "name": "Spiceworks",
       "ok": true,
       "checked": 10,
-      "datedToday": 3
+      "datedToday": 1
     },
     {
       "name": "Dark Reading",
       "ok": true,
       "checked": 50,
-      "datedToday": 5
+      "datedToday": 3
     }
   ],
-  "matchedArticles": [
-    {
-      "source": "BleepingComputer",
-      "title": "Oracle PeopleSoft servers hacked in ShinyHunters data theft attacks",
-      "link": "https://www.bleepingcomputer.com/news/security/oracle-peoplesoft-servers-hacked-in-shinyhunters-data-theft-attacks/",
-      "publishedAt": "2026-06-10T18:31:57.000Z",
-      "matchedTerms": [
-        "ShinyHunters"
-      ]
-    }
-  ]
+  "matchedArticles": []
 }
