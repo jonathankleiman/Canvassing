@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-06-13T00:06:08.993Z",
-  "checkedDate": "2026-06-12",
+  "lastRunAt": "2026-06-14T01:39:07.517Z",
+  "checkedDate": "2026-06-13",
   "baselineDate": "2026-05-11",
   "timezone": "America/Toronto",
   "runTimeEt": "19:55",
@@ -9,8 +9,8 @@
     "Canvas",
     "Instructure"
   ],
-  "runCount": 35,
-  "matchesSent": 1,
+  "runCount": 36,
+  "matchesSent": 0,
   "sourceStatus": [
     {
       "name": "Krebs on Security",
@@ -22,13 +22,13 @@
       "name": "BleepingComputer",
       "ok": true,
       "checked": 15,
-      "datedToday": 9
+      "datedToday": 3
     },
     {
       "name": "The Record",
       "ok": true,
       "checked": 5,
-      "datedToday": 3
+      "datedToday": 0
     },
     {
       "name": "EdScoop",
@@ -40,24 +40,14 @@
       "name": "Spiceworks",
       "ok": true,
       "checked": 10,
-      "datedToday": 3
+      "datedToday": 0
     },
     {
       "name": "Dark Reading",
       "ok": true,
       "checked": 50,
-      "datedToday": 2
+      "datedToday": 0
     }
   ],
-  "matchedArticles": [
-    {
-      "source": "Dark Reading",
-      "title": "ShinyHunters Uses Oracle Zero-Day to Rampage Higher Ed",
-      "link": "https://www.darkreading.com/vulnerabilities-threats/shinyhunters-oracle-zero-day-higher-ed",
-      "publishedAt": "2026-06-12T20:26:32.000Z",
-      "matchedTerms": [
-        "ShinyHunters"
-      ]
-    }
-  ]
+  "matchedArticles": []
 }
