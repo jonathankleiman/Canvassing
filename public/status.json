@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-06-16T02:01:41.942Z",
-  "checkedDate": "2026-06-15",
+  "lastRunAt": "2026-06-17T02:08:11.269Z",
+  "checkedDate": "2026-06-16",
   "baselineDate": "2026-05-11",
   "timezone": "America/Toronto",
   "runTimeEt": "19:55",
@@ -9,8 +9,8 @@
     "Canvas",
     "Instructure"
   ],
-  "runCount": 38,
-  "matchesSent": 2,
+  "runCount": 39,
+  "matchesSent": 0,
   "sourceStatus": [
     {
       "name": "Krebs on Security",
@@ -28,7 +28,7 @@
       "name": "The Record",
       "ok": true,
       "checked": 5,
-      "datedToday": 5
+      "datedToday": 1
     },
     {
       "name": "EdScoop",
@@ -40,7 +40,7 @@
       "name": "Spiceworks",
       "ok": true,
       "checked": 10,
-      "datedToday": 1
+      "datedToday": 2
     },
     {
       "name": "Dark Reading",
@@ -49,24 +49,5 @@
       "datedToday": 5
     }
   ],
-  "matchedArticles": [
-    {
-      "source": "BleepingComputer",
-      "title": "Council of Europe investigates ShinyHunters data breach claims",
-      "link": "https://www.bleepingcomputer.com/news/security/council-of-europe-investigates-shinyhunters-data-breach-claims/",
-      "publishedAt": "2026-06-15T16:37:11.000Z",
-      "matchedTerms": [
-        "ShinyHunters"
-      ]
-    },
-    {
-      "source": "BleepingComputer",
-      "title": "Infinite Campus data breach affects 137,000 school staff accounts",
-      "link": "https://www.bleepingcomputer.com/news/security/infinite-campus-data-breach-affects-137-000-school-staff-accounts/",
-      "publishedAt": "2026-06-15T12:38:55.000Z",
-      "matchedTerms": [
-        "ShinyHunters"
-      ]
-    }
-  ]
+  "matchedArticles": []
 }
