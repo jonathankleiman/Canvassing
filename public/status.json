@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-06-18T02:06:13.710Z",
-  "checkedDate": "2026-06-17",
+  "lastRunAt": "2026-06-19T02:09:20.780Z",
+  "checkedDate": "2026-06-18",
   "baselineDate": "2026-05-11",
   "timezone": "America/Toronto",
   "runTimeEt": "19:55",
@@ -9,26 +9,26 @@
     "Canvas",
     "Instructure"
   ],
-  "runCount": 40,
-  "matchesSent": 1,
+  "runCount": 41,
+  "matchesSent": 0,
   "sourceStatus": [
     {
       "name": "Krebs on Security",
       "ok": true,
       "checked": 10,
-      "datedToday": 0
+      "datedToday": 1
     },
     {
       "name": "BleepingComputer",
       "ok": true,
       "checked": 15,
-      "datedToday": 9
+      "datedToday": 12
     },
     {
       "name": "The Record",
       "ok": true,
       "checked": 5,
-      "datedToday": 3
+      "datedToday": 2
     },
     {
       "name": "EdScoop",
@@ -40,24 +40,14 @@
       "name": "Spiceworks",
       "ok": true,
       "checked": 10,
-      "datedToday": 3
+      "datedToday": 2
     },
     {
       "name": "Dark Reading",
       "ok": true,
       "checked": 50,
-      "datedToday": 3
+      "datedToday": 6
     }
   ],
-  "matchedArticles": [
-    {
-      "source": "BleepingComputer",
-      "title": "Kodak confirms data breach claimed by ShinyHunters extortion gang",
-      "link": "https://www.bleepingcomputer.com/news/security/kodak-confirms-data-breach-claimed-by-shinyhunters-extortion-gang/",
-      "publishedAt": "2026-06-17T07:07:56.000Z",
-      "matchedTerms": [
-        "ShinyHunters"
-      ]
-    }
-  ]
+  "matchedArticles": []
 }
