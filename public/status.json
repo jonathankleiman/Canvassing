@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-06-29T01:34:19.291Z",
-  "checkedDate": "2026-06-28",
+  "lastRunAt": "2026-06-30T00:19:25.855Z",
+  "checkedDate": "2026-06-29",
   "baselineDate": "2026-05-11",
   "timezone": "America/Toronto",
   "runTimeEt": "19:55",
@@ -9,8 +9,8 @@
     "Canvas",
     "Instructure"
   ],
-  "runCount": 51,
-  "matchesSent": 0,
+  "runCount": 52,
+  "matchesSent": 2,
   "sourceStatus": [
     {
       "name": "Krebs on Security",
@@ -22,13 +22,13 @@
       "name": "BleepingComputer",
       "ok": true,
       "checked": 15,
-      "datedToday": 1
+      "datedToday": 10
     },
     {
       "name": "The Record",
       "ok": true,
       "checked": 5,
-      "datedToday": 0
+      "datedToday": 4
     },
     {
       "name": "EdScoop",
@@ -40,14 +40,33 @@
       "name": "Spiceworks",
       "ok": true,
       "checked": 10,
-      "datedToday": 0
+      "datedToday": 2
     },
     {
       "name": "Dark Reading",
       "ok": true,
       "checked": 50,
-      "datedToday": 0
+      "datedToday": 5
     }
   ],
-  "matchedArticles": []
+  "matchedArticles": [
+    {
+      "source": "BleepingComputer",
+      "title": "Nissan discloses employee data breach linked to Oracle zero-day attacks",
+      "link": "https://www.bleepingcomputer.com/news/security/nissan-discloses-employee-data-breach-linked-to-oracle-zero-day-attacks/",
+      "publishedAt": "2026-06-29T20:40:44.000Z",
+      "matchedTerms": [
+        "ShinyHunters"
+      ]
+    },
+    {
+      "source": "BleepingComputer",
+      "title": "NAIC says public data stolen in ShinyHunters' PeopleSoft breach",
+      "link": "https://www.bleepingcomputer.com/news/security/naic-says-public-data-stolen-in-shinyhunters-peoplesoft-breach/",
+      "publishedAt": "2026-06-29T20:30:28.000Z",
+      "matchedTerms": [
+        "ShinyHunters"
+      ]
+    }
+  ]
 }
