@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-07-27T01:10:00.937Z",
-  "checkedDate": "2026-07-26",
+  "lastRunAt": "2026-07-28T01:01:33.947Z",
+  "checkedDate": "2026-07-27",
   "baselineDate": "2026-05-11",
   "timezone": "America/Toronto",
   "runTimeEt": "19:55",
@@ -9,8 +9,8 @@
     "Canvas",
     "Instructure"
   ],
-  "runCount": 79,
-  "matchesSent": 0,
+  "runCount": 80,
+  "matchesSent": 1,
   "sourceStatus": [
     {
       "name": "Krebs on Security",
@@ -22,13 +22,13 @@
       "name": "BleepingComputer",
       "ok": true,
       "checked": 15,
-      "datedToday": 1
+      "datedToday": 8
     },
     {
       "name": "The Record",
       "ok": true,
       "checked": 5,
-      "datedToday": 0
+      "datedToday": 5
     },
     {
       "name": "EdScoop",
@@ -40,14 +40,24 @@
       "name": "Spiceworks",
       "ok": true,
       "checked": 10,
-      "datedToday": 0
+      "datedToday": 2
     },
     {
       "name": "Dark Reading",
       "ok": true,
       "checked": 50,
-      "datedToday": 0
+      "datedToday": 4
     }
   ],
-  "matchedArticles": []
+  "matchedArticles": [
+    {
+      "source": "BleepingComputer",
+      "title": "Ernst & Young data breach claimed by ShinyHunters extortion gang",
+      "link": "https://www.bleepingcomputer.com/news/security/ernst-and-young-data-breach-claimed-by-shinyhunters-extortion-gang/",
+      "publishedAt": "2026-07-27T15:12:27.000Z",
+      "matchedTerms": [
+        "ShinyHunters"
+      ]
+    }
+  ]
 }
