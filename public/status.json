@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-07-29T01:09:17.509Z",
-  "checkedDate": "2026-07-28",
+  "lastRunAt": "2026-07-30T00:55:17.882Z",
+  "checkedDate": "2026-07-29",
   "baselineDate": "2026-05-11",
   "timezone": "America/Toronto",
   "runTimeEt": "19:55",
@@ -9,8 +9,8 @@
     "Canvas",
     "Instructure"
   ],
-  "runCount": 81,
-  "matchesSent": 0,
+  "runCount": 82,
+  "matchesSent": 1,
   "sourceStatus": [
     {
       "name": "Krebs on Security",
@@ -22,13 +22,13 @@
       "name": "BleepingComputer",
       "ok": true,
       "checked": 15,
-      "datedToday": 7
+      "datedToday": 9
     },
     {
       "name": "The Record",
       "ok": true,
       "checked": 5,
-      "datedToday": 2
+      "datedToday": 5
     },
     {
       "name": "EdScoop",
@@ -46,8 +46,18 @@
       "name": "Dark Reading",
       "ok": true,
       "checked": 50,
-      "datedToday": 6
+      "datedToday": 7
     }
   ],
-  "matchedArticles": []
+  "matchedArticles": [
+    {
+      "source": "BleepingComputer",
+      "title": "Health-ISAC warns of rising ShinyHunters data theft attacks on healthcare",
+      "link": "https://www.bleepingcomputer.com/news/security/health-isac-warns-of-rising-shinyhunters-data-theft-attacks-on-healthcare/",
+      "publishedAt": "2026-07-29T17:54:05.000Z",
+      "matchedTerms": [
+        "ShinyHunters"
+      ]
+    }
+  ]
 }
