@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-08-05T01:02:25.730Z",
-  "checkedDate": "2026-08-04",
+  "lastRunAt": "2026-08-06T00:07:00.039Z",
+  "checkedDate": "2026-08-05",
   "baselineDate": "2026-05-11",
   "timezone": "America/Toronto",
   "runTimeEt": "19:55",
@@ -9,7 +9,7 @@
     "Canvas",
     "Instructure"
   ],
-  "runCount": 88,
+  "runCount": 89,
   "matchesSent": 0,
   "sourceStatus": [
     {
@@ -46,7 +46,7 @@
       "name": "Dark Reading",
       "ok": true,
       "checked": 50,
-      "datedToday": 3
+      "datedToday": 7
     }
   ],
   "matchedArticles": []
