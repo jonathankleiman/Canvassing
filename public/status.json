@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-09-09T00:28:12.485Z",
-  "checkedDate": "2026-09-08",
+  "lastRunAt": "2026-09-09T23:57:32.641Z",
+  "checkedDate": "2026-09-09",
   "baselineDate": "2026-05-11",
   "timezone": "America/Toronto",
   "runTimeEt": "19:55",
@@ -9,20 +9,20 @@
     "Canvas",
     "Instructure"
   ],
-  "runCount": 94,
+  "runCount": 95,
   "matchesSent": 1,
   "sourceStatus": [
     {
       "name": "Krebs on Security",
       "ok": true,
       "checked": 10,
-      "datedToday": 1
+      "datedToday": 0
     },
     {
       "name": "BleepingComputer",
       "ok": true,
       "checked": 15,
-      "datedToday": 15
+      "datedToday": 10
     },
     {
       "name": "The Record",
@@ -46,15 +46,15 @@
       "name": "Dark Reading",
       "ok": true,
       "checked": 50,
-      "datedToday": 4
+      "datedToday": 3
     }
   ],
   "matchedArticles": [
     {
       "source": "BleepingComputer",
-      "title": "ShinyHunters hackers claim breach of Florida \"DAVID\" DMV database",
-      "link": "https://www.bleepingcomputer.com/news/security/shinyhunters-hackers-claim-breach-of-florida-david-dmv-database/",
-      "publishedAt": "2026-09-08T16:35:47.000Z",
+      "title": "AdaptHealth confirms 4.1 million people exposed in July cyberattack",
+      "link": "https://www.bleepingcomputer.com/news/security/adapthealth-confirms-41-million-people-exposed-in-july-cyberattack/",
+      "publishedAt": "2026-09-09T21:30:36.000Z",
       "matchedTerms": [
         "ShinyHunters"
       ]
