@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-09-09T23:57:32.641Z",
-  "checkedDate": "2026-09-09",
+  "lastRunAt": "2026-09-11T01:14:11.748Z",
+  "checkedDate": "2026-09-10",
   "baselineDate": "2026-05-11",
   "timezone": "America/Toronto",
   "runTimeEt": "19:55",
@@ -9,7 +9,7 @@
     "Canvas",
     "Instructure"
   ],
-  "runCount": 95,
+  "runCount": 96,
   "matchesSent": 1,
   "sourceStatus": [
     {
@@ -22,7 +22,7 @@
       "name": "BleepingComputer",
       "ok": true,
       "checked": 15,
-      "datedToday": 10
+      "datedToday": 13
     },
     {
       "name": "The Record",
@@ -46,15 +46,15 @@
       "name": "Dark Reading",
       "ok": true,
       "checked": 50,
-      "datedToday": 3
+      "datedToday": 4
     }
   ],
   "matchedArticles": [
     {
-      "source": "BleepingComputer",
-      "title": "AdaptHealth confirms 4.1 million people exposed in July cyberattack",
-      "link": "https://www.bleepingcomputer.com/news/security/adapthealth-confirms-41-million-people-exposed-in-july-cyberattack/",
-      "publishedAt": "2026-09-09T21:30:36.000Z",
+      "source": "Dark Reading",
+      "title": "Voice Callers Exploit BYOD to Reach Microsoft 365, Corporate Data",
+      "link": "https://www.darkreading.com/threat-intelligence/voice-callers-exploit-byod-microsoft-365-corporate-data",
+      "publishedAt": "2026-09-10T20:36:03.000Z",
       "matchedTerms": [
         "ShinyHunters"
       ]
