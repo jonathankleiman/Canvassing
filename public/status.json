@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-09-12T00:43:17.360Z",
-  "checkedDate": "2026-09-11",
+  "lastRunAt": "2026-09-13T01:09:06.406Z",
+  "checkedDate": "2026-09-12",
   "baselineDate": "2026-05-11",
   "timezone": "America/Toronto",
   "runTimeEt": "19:55",
@@ -9,8 +9,8 @@
     "Canvas",
     "Instructure"
   ],
-  "runCount": 97,
-  "matchesSent": 2,
+  "runCount": 98,
+  "matchesSent": 0,
   "sourceStatus": [
     {
       "name": "Krebs on Security",
@@ -22,13 +22,13 @@
       "name": "BleepingComputer",
       "ok": true,
       "checked": 15,
-      "datedToday": 9
+      "datedToday": 1
     },
     {
       "name": "The Record",
       "ok": true,
       "checked": 5,
-      "datedToday": 4
+      "datedToday": 0
     },
     {
       "name": "EdScoop",
@@ -40,33 +40,14 @@
       "name": "Spiceworks",
       "ok": true,
       "checked": 10,
-      "datedToday": 2
+      "datedToday": 0
     },
     {
       "name": "Dark Reading",
       "ok": true,
       "checked": 50,
-      "datedToday": 5
+      "datedToday": 0
     }
   ],
-  "matchedArticles": [
-    {
-      "source": "BleepingComputer",
-      "title": "Passkey-themed phishing attacks lead to Microsoft 365 data theft",
-      "link": "https://www.bleepingcomputer.com/news/security/passkey-themed-phishing-attacks-lead-to-microsoft-365-data-theft/",
-      "publishedAt": "2026-09-11T17:26:50.000Z",
-      "matchedTerms": [
-        "ShinyHunters"
-      ]
-    },
-    {
-      "source": "The Record",
-      "title": "Florida says motor vehicle data breach tied to credentials stolen from officer’s personal device",
-      "link": "https://therecord.media/florida-shiny-hunters-motor-vehicle",
-      "publishedAt": "2026-09-11T20:00:00.000Z",
-      "matchedTerms": [
-        "ShinyHunters"
-      ]
-    }
-  ]
+  "matchedArticles": []
 }
