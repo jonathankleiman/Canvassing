@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-09-13T01:09:06.406Z",
-  "checkedDate": "2026-09-12",
+  "lastRunAt": "2026-09-14T00:21:34.178Z",
+  "checkedDate": "2026-09-13",
   "baselineDate": "2026-05-11",
   "timezone": "America/Toronto",
   "runTimeEt": "19:55",
@@ -9,7 +9,7 @@
     "Canvas",
     "Instructure"
   ],
-  "runCount": 98,
+  "runCount": 99,
   "matchesSent": 0,
   "sourceStatus": [
     {
@@ -28,7 +28,7 @@
       "name": "The Record",
       "ok": true,
       "checked": 5,
-      "datedToday": 0
+      "datedToday": 1
     },
     {
       "name": "EdScoop",
