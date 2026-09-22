@@ -1,6 +1,6 @@
 {
-  "lastRunAt": "2026-09-21T01:33:14.107Z",
-  "checkedDate": "2026-09-20",
+  "lastRunAt": "2026-09-22T00:54:26.916Z",
+  "checkedDate": "2026-09-21",
   "baselineDate": "2026-05-11",
   "timezone": "America/Toronto",
   "runTimeEt": "19:55",
@@ -9,8 +9,8 @@
     "Canvas",
     "Instructure"
   ],
-  "runCount": 106,
-  "matchesSent": 0,
+  "runCount": 107,
+  "matchesSent": 2,
   "sourceStatus": [
     {
       "name": "Krebs on Security",
@@ -22,13 +22,13 @@
       "name": "BleepingComputer",
       "ok": true,
       "checked": 15,
-      "datedToday": 2
+      "datedToday": 9
     },
     {
       "name": "The Record",
       "ok": true,
       "checked": 5,
-      "datedToday": 0
+      "datedToday": 5
     },
     {
       "name": "EdScoop",
@@ -40,14 +40,33 @@
       "name": "Spiceworks",
       "ok": true,
       "checked": 10,
-      "datedToday": 0
+      "datedToday": 3
     },
     {
       "name": "Dark Reading",
       "ok": true,
       "checked": 50,
-      "datedToday": 0
+      "datedToday": 4
     }
   ],
-  "matchedArticles": []
+  "matchedArticles": [
+    {
+      "source": "The Record",
+      "title": "ShinyHunters cybercrime gang takes over Cl0p ransomware site, demands extortion payment",
+      "link": "https://therecord.media/shinyhunters-clop-cyberattack-website",
+      "publishedAt": "2026-09-21T14:00:00.000Z",
+      "matchedTerms": [
+        "ShinyHunters"
+      ]
+    },
+    {
+      "source": "Dark Reading",
+      "title": "ShinyHunters Hacked Clop. Now What About Clop's Victims?",
+      "link": "https://www.darkreading.com/cyberattacks-data-breaches/shinyhunters-hacked-clop-what-about-clops-victims",
+      "publishedAt": "2026-09-21T20:07:56.000Z",
+      "matchedTerms": [
+        "ShinyHunters"
+      ]
+    }
+  ]
 }
